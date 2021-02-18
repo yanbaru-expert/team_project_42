@@ -5,4 +5,5 @@ ImportCsv.text_data
 ImportCsv.movie_data
 
 # lineテーブルのデータを全削除し、'db/csv_data/line_data.csv'のデータを投入
-ImportCsv.line_data
+Line.destroy_all
+ImportCsv.lineimport("db/csv_data/line_data.csv")
