@@ -1,4 +1,5 @@
-<h1 class="text-center text-success">LINE</h1>
+<%= link_to "詳細" %>
+<h1 class="text-center text-success mb-4">LINE</h1>
 <table class="table table-striped">
   <thead class="text-white bg-success">
     <tr>
@@ -12,7 +13,7 @@
           <tr>
             <th scope="row"><%= i %></th>
             <td><%= line.genre %></td>
-            <td><%= link_to "#{line.title}", line , target: :_blank , rel: "noopener noreferrer"%></td>
+            <td><%= link_to "#{line.title}", line_path(line.id), target: "blank" %></td>
           </tr>
         <% end %>
       </tbody>
