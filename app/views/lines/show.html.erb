@@ -1,13 +1,3 @@
-<%# <% <div class="mx-auto mt-5"  style="width: 500px;">
-<%= markdown(@line.content)%>
-<%= "Line詳細ページです"%>
-<%= @line.id %>
-</div>
- %>
-<%#-------------------------- %>
-<% content_for(:title) { @line.title } %>
-<section id="line-content">
-  <div class="markdown">
-    <%= markdown(@line.content) %>
-  </div>
-</section>
+<p>
+  <%= markdown(@line.content) %>
+</p>

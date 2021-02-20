@@ -32,9 +32,9 @@ class ImportCsv
     Line.destroy_all
     CSV.foreach(path, headers: true) do |row|
       list << {
-        genre: row["Genre"],
-        title: row["Title"],
-        content: row["Content"],
+        genre: row["genre"],
+        title: row["title"],
+        content: row["content"],
       }
     end
     Line.create!(list)
