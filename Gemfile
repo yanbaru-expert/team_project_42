@@ -12,7 +12,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
-# 多言語対応(Rails 6の場合)
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 group :development, :test do
