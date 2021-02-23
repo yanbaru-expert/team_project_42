@@ -25,7 +25,7 @@ module TeamProject
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.i18n.default_locale = :ja
-    config.time_zone = 'Asia/Tokyo'
+    config.time_zone = "Asia/Tokyo"
     # lib/autoloads ディレクトリ配下のファイルを読み込む
     config.autoload_paths << Rails.root.join("lib/autoloads")
 
