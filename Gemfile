@@ -15,8 +15,11 @@ gem 'redcarpet'
 gem 'coderay'
 
 gem 'devise'
+gem 'devise-bootstrap-views'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
