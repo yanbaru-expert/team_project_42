@@ -5,7 +5,7 @@
   <div>
     <div>
       <% @php_texts.each do |php_text| %>
-        <%= link_to "#", target: :_blank do %>
+        <%= link_to php_text_path(php_text.id), target: :_blank do %>
           <%= image_tag 'default.jpg' %>
           <p><%= php_text.title %></p>
           <p>【PHP】</p>
