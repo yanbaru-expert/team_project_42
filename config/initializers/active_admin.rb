@@ -1,5 +1,5 @@
 ActiveAdmin.setup do |config|
-
+  #
   config.site_title = "Team Project"
 
   # Set the link url for the title. For example, to take
