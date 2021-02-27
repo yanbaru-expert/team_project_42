@@ -1,7 +1,19 @@
 @import "bootstrap/scss/bootstrap";
+
 .base-container {
   margin: 0 auto;
   padding: 1rem;
+}
+
+body {
+  padding-top: 56px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: 2rem;
+  text-align: center;
 }
 
 /* max-width */
@@ -16,4 +28,22 @@
 
 .mw-xl {
   max-width: 1200px;
+}
+
+// 教材カードのレイアウト
+
+.texts-wrapper {
+  margin: 0 auto;
+}
+
+div.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 50px;
+}
+
+div.content-card {
+  height: 370px;
+  max-width: 376px;
+  margin: 0 auto;
 }

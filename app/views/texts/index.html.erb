@@ -1,2 +1,23 @@
-<%# 動作確認用に記入しました。実装の際は削除お願いします/とうやま %>
-<%= "トップページ" %>
+<div class="texts-wrapper">
+  <div class= "contents-title text-center">
+    <h1>Ruby/Rails テキスト教材</h1>
+  </div>
+  <div class="row">
+    <% @texts.each do |text| %>
+      <div class="col-12 col-md-6 col-lg-4 text-card-container">
+        <div class="card content-card border-dark mb-3">
+          <%= link_to "#", target: :_blank do%>
+            <img class="card-img-top" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="カード画像", >
+            <div class="card-body">
+              <%# ---読破済機能別タスクにて実装以下仮設置--- %>
+              <a href="#" class="btn btn-secondary btn-block">読破済にする</a>
+              <%# -------------------------------------%>
+              <p class="card-title"><%= text.title %></p>
+              <p class="card-text">【<%= text.genre %>】</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
