@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 # textsテーブルのデータを全削除し、'db/csv_data/text_data.csv'のデータを投入
 ImportCsv.text_data
 
@@ -14,6 +15,7 @@ ImportCsv.movie_data
 
 # lineテーブルのデータを全削除し、'db/csv_data/line_data.csv'のデータを投入
 ImportCsv.line_data
+
 EMAIL = "test@example.com"
 PASSWORD = "password"
 
@@ -21,4 +23,9 @@ PASSWORD = "password"
 User.find_or_create_by!(email: EMAIL) do |user|
   user.password = PASSWORD
   puts "ユーザーの初期データインポートに成功しました。"
+end
+
+AdminUser.find_or_create_by!(email: 'admin@example.com') do |admin_user|
+  user.password = PASSWORD
+  puts "管理者の初期データインポートに成功しました。"
 end
