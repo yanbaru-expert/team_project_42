@@ -6,7 +6,7 @@
     <% @texts.each do |text| %>
       <div class="col-12 col-md-6 col-lg-4 text-card-container">
         <div class="card content-card border-dark mb-3">
-          <%= link_to "#", target: :_blank do%>
+          <%= link_to text_path(text.id), target: :_blank do%>
             <img class="card-img-top" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="カード画像", >
             <div class="card-body">
               <%# ---読破済機能別タスクにて実装以下仮設置--- %>
