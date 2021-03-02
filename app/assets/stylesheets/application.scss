@@ -18,6 +18,10 @@
   max-width: 1200px;
 }
 
+body {
+  padding-top: 56px;
+}
+
 .alert-notice {
   @extend .alert-success;
 }
