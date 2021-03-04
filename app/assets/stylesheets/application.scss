@@ -10,6 +10,10 @@ body {
   padding-bottom: 50px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 h1 {
   padding: 20px 0px 10px 0px;
   font-size: 2rem;
@@ -62,4 +66,9 @@ div.content-card {
   height: 370px;
   max-width: 376px;
   margin: 0 auto;
+}
+
+.card-title {
+  padding-top: 30px;
+  margin-bottom: 1rem;
 }
