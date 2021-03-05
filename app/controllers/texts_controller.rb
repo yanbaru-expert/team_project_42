@@ -6,5 +6,6 @@ class TextsController < ApplicationController
 
   def show
     @text = Text.find(params[:id])
+    @read_text_ids = current_user.reads.pluck(:text_id)
   end
 end

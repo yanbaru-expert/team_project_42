@@ -1,17 +1,11 @@
 class ReadsController < ApplicationController
-  before_action :set_text
-
   def create
+    @text = Text.find(params[:text_id])
     current_user.reads.create!(text_id: @text.id)
   end
 
   def destroy
-    current_user.reads.find_by(text_id: @text.id).destroy!
-  end
-
-  private
-
-  def set_text
     @text = Text.find(params[:text_id])
+    current_user.reads.find_by(text_id: @text.id).destroy!
   end
 end
