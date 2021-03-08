@@ -57,15 +57,6 @@ ActiveRecord::Schema.define(version: 2021_03_04_014548) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "read_texts", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "text_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["text_id"], name: "index_read_texts_on_text_id"
-    t.index ["user_id"], name: "index_read_texts_on_user_id"
-  end
-
   create_table "reads", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "text_id", null: false
@@ -96,8 +87,6 @@ ActiveRecord::Schema.define(version: 2021_03_04_014548) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "read_texts", "texts"
-  add_foreign_key "read_texts", "users"
   add_foreign_key "reads", "texts"
   add_foreign_key "reads", "users"
 end
