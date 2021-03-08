@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   root "texts#index"
   resources :texts, only: [:index, :show]
   resources :lines, only: [:index, :show]
-  resources :php_texts, only: [:index, :show]
   resources :texts do
     resource :reads, only: [:create, :destroy]
   end
