@@ -6,8 +6,8 @@ class ReadsController < ApplicationController
   end
 
   def destroy
-    @read = current_user.reads.find_by(text_id: @text.id)
-    @read.destroy!
+    read = current_user.reads.find_by(text_id: @text.id)
+    read.destroy!
   end
 
   private
