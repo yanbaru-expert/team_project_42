@@ -8,10 +8,10 @@
         <div class="card content-card border-dark mb-3">
           <%= link_to text_path(text.id), target: :_blank do%>
             <img class="card-img-top" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="カード画像", >
-            <div class="card-body">
-              <%# ---読破済機能別タスクにて実装以下仮設置--- %>
-              <a href="#" class="btn btn-secondary btn-block">読破済にする</a>
-              <%# -------------------------------------%>
+            <div class="card-body text-dark text-card-body">
+              <div id="text-<%= text.id %>">
+                <%= render "read", text: text %>
+              </div>
               <p class="card-title"><%= text.title %></p>
               <p class="card-text">【<%= text.genre %>】</p>
             </div>
