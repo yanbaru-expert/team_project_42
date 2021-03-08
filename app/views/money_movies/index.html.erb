@@ -1,0 +1,24 @@
+<div class="texts-wrapper">
+  <div class= "contents-title text-center">
+    <h1>マネタイズ講座 動画教材</h1>
+  </div>
+  <div class="row">
+    <% @money_movies.each do |money_movie| %>
+      <div class="col-12 col-md-6 col-lg-4 movie-card-container">
+        <div class="card content-card border-dark mb-3">
+          <%= link_to movies_path(money_movie.id), target: :_blank do%>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src=<%= money_movie.url %>></iframe>
+            </div>
+            <div class="card-body">
+              <%# ---読破済機能別タスクにて実装以下仮設置--- %>
+              <a href="#" class="btn btn-secondary btn-block">視聴済みにする</a>
+              <%# -------------------------------------%>
+              <p class="card-title"><%= money_movie.title %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
