@@ -3,4 +3,7 @@
   <p>
     <%= markdown(@text.content) %>
   </p>
+  <div id="text-<%= @text.id %>">
+    <%= render "read", text: @text %>
+  </div>
 </div>
