@@ -1,6 +1,6 @@
 <div class="fixed-top">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/texts">やんばるエキスパート</a>
+    <%= link_to "やんばるエキスパート", texts_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,10 +11,10 @@
             Ruby
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/texts">Ruby/Railsテキスト教材</a>
-            <a class="dropdown-item" href="/movies">Ruby/Rails動画教材</a>
-            <a class="dropdown-item" href="#">AWSテキスト教材</a>
-            <a class="dropdown-item" href="#">チャレンジ問題集</a>
+            <%= link_to "Ruby/Railsテキスト教材", texts_path, class: "dropdown-item" %>
+            <%= link_to "Ruby/Rails動画教材", movies_path, class: "dropdown-item" %>
+            <%= link_to "AWSテキスト教材", texts_path(genre: "aws"), class: "dropdown-item" %>
+            <%= link_to "チャレンジ問題集", "#", class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -22,8 +22,8 @@
             PHP
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/php_texts">PHPテキスト教材</a>
-            <a class="dropdown-item" href="/php_movies">PHP動画教材</a>
+            <%= link_to "PHPテキスト教材", texts_path(genre: "php"), class: "dropdown-item" %>
+            <%= link_to "PHP動画教材", movies_path(genre: "php"), class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -31,11 +31,11 @@
             フロント
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">HTML&CSS</a>
-            <a class="dropdown-item" href="#">JavaScript</a>
-            <a class="dropdown-item" href="#">TypeScript</a>
-            <a class="dropdown-item" href="#">Angular</a>
-            <a class="dropdown-item" href="#">Vue</a>
+            <%= link_to "HTML&CSS", "#", class: "dropdown-item" %>
+            <%= link_to "JavaScript", "#", class: "dropdown-item" %>
+            <%= link_to "TypeScript", "#", class: "dropdown-item" %>
+            <%= link_to "Angular", "#", class: "dropdown-item" %>
+            <%= link_to "Vue", "#", class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -43,15 +43,15 @@
             勉強会
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/talk_movies">全ての勉強会</a>
-            <a class="dropdown-item" href="/live_movies">プログラミング勉強会</a>
+            <%= link_to "全ての勉強会", movies_path(genre: "talk"), class: "dropdown-item" %>
+            <%= link_to "プログラミング勉強会", movies_path(genre: "live"), class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/money_movies">マネタイズ講座</a>
+          <%= link_to "マネタイズ講座", movies_path(genre: "money"), class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/lines">LINE</a>
+          <%= link_to "LINE", lines_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <% if user_signed_in? %>
@@ -59,18 +59,16 @@
             マイページ
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">進歩管理</a>
-              <a class="dropdown-item" href="#">アカウント編集</a>
-              <a class="dropdown-item" <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %></a>
+              <%= link_to "進捗管理", "#", class: "dropdown-item" %>
+              <%= link_to "アカウント編集", "#", class: "dropdown-item" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "dropdown-item" %>
             </div>
           <% else %>
             <li class="nav-item">
-              <a class="nav-link"<%= link_to "ログイン", new_user_session_path %>
-              </a>
+              <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <a class="nav-link"<%= link_to "新規登録", new_user_registration_path %>
-              </a>
+              <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
             </li>
           <% end %>
         </li>

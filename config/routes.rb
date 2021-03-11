@@ -7,10 +7,6 @@ Rails.application.routes.draw do
   resources :lines, only: [:index, :show]
   resources :php_texts, only: [:index, :show]
   resources :movies, only: [:index]
-  resources :money_movies, only: [:index]
-  resources :php_movies, only: [:index]
-  resources :talk_movies, only: [:index]
-  resources :live_movies, only: [:index]
   resources :texts do
     resource :reads, only: [:create, :destroy]
   end
