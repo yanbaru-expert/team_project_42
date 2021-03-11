@@ -14,6 +14,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'redcarpet'
 gem 'activeadmin'
 gem 'coderay'
+gem 'ransack'
+gem 'font-awesome-rails'
 
 gem 'devise'
 gem 'devise-bootstrap-views'
