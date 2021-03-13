@@ -12,7 +12,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "Ruby/Railsテキスト教材", texts_path, class: "dropdown-item" %>
-            <%= link_to "Ruby/Rails動画教材", "#", class: "dropdown-item" %>
+            <%= link_to "Ruby/Rails動画教材", movies_path, class: "dropdown-item" %>
             <%= link_to "AWSテキスト教材", texts_path(genre: "aws"), class: "dropdown-item" %>
             <%= link_to "チャレンジ問題集", "#", class: "dropdown-item" %>
           </div>
@@ -23,7 +23,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "PHPテキスト教材", texts_path(genre: "php"), class: "dropdown-item" %>
-            <%= link_to "PHP動画教材", "#", class: "dropdown-item" %>
+            <%= link_to "PHP動画教材", movies_path(genre: "php"), class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -43,12 +43,12 @@
             勉強会
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "全ての勉強会", "#", class: "dropdown-item" %>
-            <%= link_to "プログラミング勉強会", "#", class: "dropdown-item" %>
+            <%= link_to "全ての勉強会", movies_path(genre: "talk"), class: "dropdown-item" %>
+            <%= link_to "プログラミング勉強会", movies_path(genre: "live"), class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item">
-          <%= link_to "マネタイズ講座", "#", class: "nav-link" %>
+          <%= link_to "マネタイズ講座", movies_path(genre: "money"), class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "LINE", lines_path, class: "nav-link" %>

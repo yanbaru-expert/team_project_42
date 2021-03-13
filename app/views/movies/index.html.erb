@@ -1,6 +1,6 @@
 <div class="texts-wrapper">
   <div class= "contents-title text-center">
-    <h1>Ruby/Rails 動画教材</h1>
+    <h1><%= @title %> 動画教材</h1>
   </div>
   <div class="row">
     <% @movies.each do |movie| %>
@@ -15,7 +15,6 @@
               <a href="#" class="btn btn-secondary btn-block">視聴済みにする</a>
               <%# -------------------------------------%>
               <p class="card-title"><%= movie.title %></p>
-              <p class="card-text">【<%= movie.genre %>】</p>
             </div>
           <% end %>
         </div>
