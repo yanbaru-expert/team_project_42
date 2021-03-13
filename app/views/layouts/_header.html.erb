@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Ruby
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -17,7 +17,7 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           PHP
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -26,7 +26,7 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           フロント
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -38,7 +38,7 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           勉強会
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,15 +46,15 @@
           <%= link_to "プログラミング勉強会", movies_path(genre: "live"), class: "dropdown-item" %>
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <%= link_to "マネタイズ講座", movies_path(genre: "money"), class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <%= link_to "LINE", lines_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           マイページ
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
