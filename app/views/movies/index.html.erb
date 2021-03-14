@@ -11,9 +11,9 @@
               <iframe class="embed-responsive-item" src=<%= movie.url %>></iframe>
             </div>
             <div class="card-body">
-              <%# ---読破済機能別タスクにて実装以下仮設置--- %>
-              <a href="#" class="btn btn-secondary btn-block">視聴済みにする</a>
-              <%# -------------------------------------%>
+              <div id="movie-<%= movie.id %>">
+                <%= render "watch", movie: movie %>
+              </div>
               <p class="card-title"><%= movie.title %></p>
             </div>
           <% end %>
