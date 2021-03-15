@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movies, only: :index
-  PER_PAGE = 3
+  PER_PAGE = 9
   def index
 
   end

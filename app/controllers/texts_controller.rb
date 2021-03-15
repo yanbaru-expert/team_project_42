@@ -1,5 +1,5 @@
 class TextsController < ApplicationController
-  PER_PAGE = 3
+  PER_PAGE = 9
   def index
     @q = set_texts.ransack(params[:q])
     @texts = @q.result.page(params[:page]).per(PER_PAGE)
