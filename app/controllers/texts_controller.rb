@@ -24,10 +24,7 @@ class TextsController < ApplicationController
       when "aws"
         @title = "AWS"
         "AWS"
-      when nil
-        @title = "Ruby/Rails"
-        ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]
-      when ""
+      else
         @title = "Ruby/Rails"
         ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]
       end
