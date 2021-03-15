@@ -1,7 +1,7 @@
 class TextsController < ApplicationController
-  before_action :set_texts, only: :index
-
   def index
+    @q = set_texts.ransack(params[:q])
+    @texts = @q.result
   end
 
   def show
@@ -11,16 +11,20 @@ class TextsController < ApplicationController
   private
 
   def set_texts
-    genre = params[:genre]
+    if params[:q]
+      @genre = params[:q]["genre"]
+    else
+      @genre = params[:genre]
+    end
 
-    search_genre = case genre
+    search_genre = case @genre
       when "php"
         @title = "PHP"
         "Php"
       when "aws"
         @title = "AWS"
         "AWS"
-      when nil
+      else
         @title = "Ruby/Rails"
         ["Basic", "Git", "HTML&CSS", "Ruby", "Ruby on Rails"]
       end
