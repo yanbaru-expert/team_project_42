@@ -22,6 +22,21 @@ h2 {
   font-size: 1.75rem;
 }
 
+.base-bg-color {
+  background-color: #5D99FF;
+}
+
+.header-nav {
+    font-size: 0.8rem;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* max-width */
 
 .mw-md {
