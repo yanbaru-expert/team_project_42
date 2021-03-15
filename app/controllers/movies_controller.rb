@@ -1,7 +1,8 @@
 class MoviesController < ApplicationController
   before_action :set_movies, only: :index
+  PER_PAGE = 3
   def index
-    
+
   end
 
   def set_movies
@@ -25,7 +26,7 @@ class MoviesController < ApplicationController
         ["Basic", "Git", "Ruby", "Ruby on Rails"]
       end
 
-    @movies = Movie.where(genre: search_genre)
+    @movies = Movie.page(params[:page]).per(PER_PAGE)
   end
 
 end
