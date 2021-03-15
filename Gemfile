@@ -16,7 +16,7 @@ gem 'activeadmin'
 gem 'coderay'
 gem 'ransack'
 gem 'font-awesome-rails'
-
+gem 'kaminari'
 gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'rails-i18n', '~> 6.0'
