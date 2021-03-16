@@ -1,19 +1,21 @@
-<h1 class="text-center text-success mb-4">LINE</h1>
-<table class="table table-striped">
-  <thead class="text-white bg-success">
-    <tr>
-      <th>No.</th>
-      <th>ジャンル</th>
-      <th>内容</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @lines.each.with_index(1) do |line, i| %>
+<div class ="base-container mw-md">
+  <h1 class="text-center text-success mb-4">LINE</h1>
+  <table class="table table-striped">
+    <thead class="text-white bg-success">
       <tr>
-        <th scope="row"><%= i %></th>
-        <td><%= line.genre %></td>
-        <td><%= link_to "#{line.title}", line_path(line.id), target: "blank" %></td>
+        <th>No.</th>
+        <th>ジャンル</th>
+        <th>内容</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @lines.each.with_index(1) do |line, i| %>
+        <tr>
+          <th scope="row"><%= i %></th>
+          <td><%= line.genre %></td>
+          <td><%= link_to "#{line.title}", line_path(line.id), target: "blank" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -84,3 +84,14 @@ div.content-card {
   padding-top: 30px;
   margin-bottom: 1rem;
 }
+
+// ラインページの設定
+$line-color: #28a745;
+
+.line-bg-color {
+  background-color: $line-color;
+
+  &:hover {
+    background-color: $line-color;
+  }
+}
