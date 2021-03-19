@@ -4,7 +4,7 @@ class Movie < ApplicationRecord
   validates :genre, presence: true
   validates :title, presence: true
   validates :url, presence: true
-  paginates_per 9
+  paginates_per  18
   def watched_by?(user)
     watches.find_by(user_id: user.id).present?
   end
