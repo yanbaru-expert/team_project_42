@@ -1,5 +1,5 @@
 module StylesheetHelper
-  def bg_color
+  def base_color
     if controller_name == "lines"
       "line-bg-color"
     else
