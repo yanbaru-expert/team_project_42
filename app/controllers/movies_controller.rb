@@ -25,8 +25,6 @@ class MoviesController < ApplicationController
         @title = "Ruby/Rails"
         ["Basic", "Git", "Ruby", "Ruby on Rails"]
       end
-    #@q = Movie.where(genre: search_genre)
-    #@movies = @q.page(params[:page])
     @movies = Movie.where(genre: search_genre).page(params[:page])
   end
 
