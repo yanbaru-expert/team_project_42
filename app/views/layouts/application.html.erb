@@ -9,9 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header class="fixed-top base-bg-color">
-      <%= render 'layouts/header'%>
-    </header>
+    <%= render 'layouts/header'%>
     <main>
       <%= render 'layouts/flash'%>
       <%# max_width メソッドは application_helper.rb に記載 %>
@@ -19,8 +17,6 @@
         <%= yield %>
       </div>
     </main>
-    <footer class="fixed-bottom base-bg-color">
-      <%= render 'layouts/footer'%>
-    </footer>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
