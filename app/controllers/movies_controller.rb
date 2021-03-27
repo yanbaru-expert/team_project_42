@@ -1,7 +1,8 @@
 class MoviesController < ApplicationController
   before_action :set_movies, only: :index
+
   def index
-    
+
   end
 
   def set_movies
@@ -24,8 +25,7 @@ class MoviesController < ApplicationController
         @title = "Ruby/Rails"
         ["Basic", "Git", "Ruby", "Ruby on Rails"]
       end
-
-    @movies = Movie.where(genre: search_genre)
+    @movies = Movie.where(genre: search_genre).page(params[:page])
   end
 
 end
